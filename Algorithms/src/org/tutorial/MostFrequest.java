@@ -22,14 +22,41 @@ public class MostFrequest {
 		//List<Integer> list = new ArrayList<Integer>(Arrays.asList(0));
 		List<Integer> list = new ArrayList<Integer>(Arrays.asList(0, -1, 10, 10, -1, 10, -1, -1, -1, 1));
 
-		System.out.println("Most Frequest no in "+list+" is :" + solutionA(list));
+		//System.out.println("Most Frequest no in "+list+" is :" + solutionA(list));
+		System.out.println("Most Frequest no in "+list+" is :" + solutionB(list));
 
+	}
+	
+	public static Integer solutionB(List<Integer> list) {
+		
+
+		Map<Integer, Integer> count = new HashMap<Integer, Integer>();
+		Integer max_count = -1;
+		Integer max_item = null;
+
+        if (!list.isEmpty()) {
+			for (int i = 0; i < list.size(); i++) {
+				if (!count.containsKey(list.get(i))) {
+					count.put(list.get(i), 1);
+				} else {
+					int cnt = count.get(list.get(i));
+					count.put(list.get(i), ++cnt);
+					
+					if(cnt > max_count) {
+						max_count = cnt;
+						max_item = list.get(i);
+					}
+				}	
+				
+			}
+		}
+        return max_item;
 	}
 
 	public static Integer solutionA(List<Integer> list) {
 
 		Map<Integer, Integer> counter = new HashMap<Integer, Integer>();
-		Integer mostFrq = null;
+		Integer max_count = null;
 
 		List<Entry<Integer, Integer>> sortedList;
         if (!list.isEmpty()) {
@@ -38,8 +65,7 @@ public class MostFrequest {
 					counter.put(list.get(i), 1);
 				} else {
 					int cnt = counter.get(list.get(i));
-					cnt++;
-					counter.put(list.get(i), cnt);
+					counter.put(list.get(i), ++cnt);
 				}
 			}
 			
@@ -54,9 +80,9 @@ public class MostFrequest {
 				}
 			});
 			
-			mostFrq = sortedList.get(0).getKey();
+			max_count = sortedList.get(0).getKey();
 		}
         
-		return mostFrq;
+		return max_count;
 	}
 }
