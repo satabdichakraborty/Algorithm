@@ -22,8 +22,9 @@ public class MostFreqItemInArray {
         
         int [] arrayToPass = array3;
         
-        System.out.println("Most Frequest Item in "+Arrays.toString(arrayToPass));
-        most_frequest(arrayToPass);
+       
+        System.out.println("Most Frequest Item in "+Arrays.toString(arrayToPass)+" is " + most_frequest(arrayToPass));
+        
     }
 	
 	private static int most_frequest(int[] items) {
@@ -50,7 +51,8 @@ public class MostFreqItemInArray {
 			//} 
 		}
 		System.out.println(maxItem);
-		return maxItem;
+		
+		return maxItem==null?0:maxItem;
 	}
 
 }
