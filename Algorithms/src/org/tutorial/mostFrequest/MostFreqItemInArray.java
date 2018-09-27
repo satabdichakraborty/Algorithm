@@ -1,4 +1,4 @@
-package org.tutorial;
+package org.tutorial.mostFrequest;
 
 import java.util.Arrays;
 import java.util.HashMap;
