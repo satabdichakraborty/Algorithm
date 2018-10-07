@@ -5,7 +5,7 @@ public class MS {
 		// NOTE: The following input values will be used for testing your
 		// solution.
 		int[][] bombs1 = { { 0, 2 }, { 2, 0 } };
-		mineSweeper(bombs1, 3, 3);
+		//mineSweeper(bombs1, 3, 3);
 		// should return:
 		// [[0, 1, -1],
 		// [1, 2, 1],
@@ -26,6 +26,13 @@ public class MS {
 		// [1, 3, -1, 2, 0],
 		// [0, 1, 2, 2, 1],
 		// [0, 0, 1, -1, 1]]
+		
+		int[][] bombs4 = { { 0 , 0 }, { 0 , 1 }, { 0, 2 }, { 2, 0 }, {4, 4} };
+		mineSweeper(bombs4, 5, 5);
+		// should return:
+		// [[-1, 2, -1],
+		// [2, 3, 1],
+		// [-1, 1, 0]]
 	}
 
 	// Implement your solution below.
@@ -61,12 +68,12 @@ public class MS {
 		// Just printing last:
 		for (int row = 0; row < field.length; row++) {
 			for (int col = 0; col < field[row].length; col++) {
-				System.out.print(field[row][col] + " ");
+				System.out.print(field[row][col] + "		");
 			}
 			System.out.println(" ");
 			
 		}
-		System.out.println("====================================================");
+		System.out.println("===========================================================================================");
 		for (int row = 0; row < field.length; row++) {
 			boolean isBomb = false;
 			int val = 0;
@@ -200,7 +207,7 @@ public class MS {
 		for (int row = 0; row < field.length; row++) {
 
 			for (int col = 0; col < field[row].length; col++) {
-				System.out.print(field[row][col] + " ");
+				System.out.print(field[row][col] + "		");
 			}
 			System.out.println(" ");
 		}
