@@ -1,8 +1,4 @@
-package org.tutorial.linkedList;
-
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
+package org.tutorial.yk;
 
 import org.tutorial.linkedList.Node;
 
@@ -23,48 +19,30 @@ public class Nth {
         Node head2 = current2;
         // head2 = 1 -> 2 -> 3 -> 4 -> (null)
 
-        //nthFromLast(head, 1); //should return 1.
-        // nthFromLast(head, 5); //should return 5.
-        // nthFromLast(head2, 2); //should return 3.
-        // nthFromLast(head2, 4); //should return 1.
-        // nthFromLast(head2, 5); //should return null.
-         nthFromLast(null, 1); //should return null.
+        // nthFromLast(head, 1) should return 1.
+        // nthFromLast(head, 5) should return 5.
+        // nthFromLast(head2, 2) should return 3.
+        // nthFromLast(head2, 4) should return 1.
+        // nthFromLast(head2, 5) should return null.
+        // nthFromLast(null, 1) should return null.
     }
 
 
     // Implement your function below.
     public static Node nthFromLast(Node head, int n) {
-    	Node headCount = head;
-    	if(head == null) {
-    		System.out.println("Asked for null");
-    		return null;
-    	}
-    	System.out.println(linkedListToString(head));
-    	int count = 0;
-    	
-    	while (headCount != null) {
-    		Node node = (Node) headCount.next;
-    		headCount = headCount.next;
-    		count++;
-		}
-    	
-    	int element = count - n;
-    	if(element < 0) {
-    		System.out.println("Asked for null");
-    		return null;
-    	}
-    	
-    	System.out.println("Length = "+count+ " : n = "+n+" : element = "+element);
-    	
-    	int i=0;
-    	while(i < element && head != null){
-    		Node node = (Node) head.next;
-    		head = head.next;
-    		i++;
-    	}
-    	
-    	System.out.println("Asked for " +head.value);
-        return head;
+        Node left = head;
+        Node right = head;
+
+        // First, make sure that we have at least n items in the linked list.
+        for (int i = 0; i < n; i++) {
+            if (right == null) return null;
+            right = right.child;
+        }
+        while (right != null) {
+            right = right.child;
+            left = left.child;
+        }
+        return left;
     }
 
 
@@ -77,7 +55,7 @@ public class Nth {
         while (current != null) {
             sb.append(String.valueOf(current.value));
             sb.append(" -> ");
-            current = current.next;
+            current = current.child;
         }
         sb.append("(null)");
         return sb.toString();

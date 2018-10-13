@@ -2,11 +2,11 @@ package org.tutorial.linkedList;
 
 public class Node {
 	
-	int data;
+	int value;
 	Node next;
 	
 	Node (int data, Node next) {
-		this.data = data;
+		this.value = data;
 		this.next = next;
 	}
 	
