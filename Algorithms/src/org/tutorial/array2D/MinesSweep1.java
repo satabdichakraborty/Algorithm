@@ -1,6 +1,6 @@
-package org.tutorial.minesweep;
+package org.tutorial.array2D;
 
-public class MS1 {
+public class MinesSweep1 {
     public static void main(String[] args) {
         // NOTE: The following input values will be used for testing your solution.
         int[][] bombs1 = {{0, 2}, {2, 0}};

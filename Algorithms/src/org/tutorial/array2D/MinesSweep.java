@@ -1,6 +1,6 @@
-package org.tutorial.minesweep;
+package org.tutorial.array2D;
 
-public class MS {
+public class MinesSweep {
 	public static void main(String[] args) {
 		// NOTE: The following input values will be used for testing your
 		// solution.

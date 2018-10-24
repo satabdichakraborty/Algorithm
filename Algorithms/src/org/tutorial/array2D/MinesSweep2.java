@@ -1,6 +1,6 @@
-package org.tutorial.minesweepexpand;
+package org.tutorial.array2D;
 
-public class MS2 {
+public class MinesSweep2 {
     public static void main(String[] args) {
         // NOTE: The following input values will be used for testing your solution.
         int[][] field1 = {{0, 0, 0, 0, 0},
