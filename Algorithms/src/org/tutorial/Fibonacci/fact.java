@@ -1,4 +1,4 @@
-package org.tutorial.recursivefunc;
+package org.tutorial.Fibonacci;
 
 public class fact {
 

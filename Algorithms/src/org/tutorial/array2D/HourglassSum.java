@@ -62,13 +62,13 @@ public class HourglassSum {
 					int f7 = arr[i+1][j+1];
 					
 					sum  = sum + f1 + f2 + f3 + f4 + f5 + f6 + f7;
-					System.out.print(f1 + " "+ f2 + " "+f3);
-					System.out.println();
-					System.out.print(" "+ f4 + " ");
-					System.out.println();
-					System.out.print(f5 + " "+ f6 + " "+f7);
-					System.out.println(" sum ="+sum);
-					System.out.println("------------");
+					//System.out.print(f1 + " "+ f2 + " "+f3);
+					//System.out.println();
+					//System.out.print(" "+ f4 + " ");
+					//System.out.println();
+					//System.out.print(f5 + " "+ f6 + " "+f7);
+					//System.out.println(" sum ="+sum);
+					//System.out.println("------------");
 					max_sum = Math.max(max_sum, sum);
 				}
 				sum = 0;

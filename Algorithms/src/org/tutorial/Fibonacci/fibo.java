@@ -1,4 +1,4 @@
-package org.tutorial.recursivefunc;
+package org.tutorial.Fibonacci;
 
 import java.util.HashMap;
 import java.util.Map;
