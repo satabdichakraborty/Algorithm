@@ -1,5 +1,7 @@
 package org.tutorial.sorting;
 
+import java.util.Arrays;
+
 public class QuickSort {
 
 	// Average O(nlogn)
@@ -11,9 +13,7 @@ public class QuickSort {
 		quicksort(unsortedList);
 
 		System.out.println("Sorted Array : ");
-		for (int i : unsortedList) {
-			System.out.print(i + " ");
-		}
+		Arrays.stream(unsortedList).forEach(i -> System.out.print(i+" "));
 	}
 
 	private static void quicksort(int[] array) {
